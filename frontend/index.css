@@ -1,3 +1,13 @@
+
+header {
+    text-align: center;
+    margin: 25px;
+}
+header img {
+    height: 75px;
+    width: auto;
+}
+
+
 body {
-    background: black;
 }
