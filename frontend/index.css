@@ -29,6 +29,18 @@ header img {
     border-radius: 10px;
 }
 
+.historial-list {
+    padding: 10px;
+    overflow-y: auto;
+    height: 100%;
+}
+
+.historial-item {
+    padding: 5px;
+    border-bottom: 1px solid #ccc;
+    font-size: 14px;
+}
+
 
 .main {
     flex: 1;
