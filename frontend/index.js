@@ -1,19 +1,46 @@
-// button create
+// initilizing
 const createBtn = document.querySelector('.create-btn');
-createBtn.addEventListener('click', () => {
-    const newItemText = prompt('Introduce el texto:');
-
-    // do it button create
-    addElementToList(newItemText);
-    historial('se creó el elemento: ' + newItemText);
-});
-
-
-// list products or service
 const listContainer = document.querySelector('.list');
 const historialContainer = document.querySelector('.historial-list');
+const windowsCreate = document.getElementById('window-create');
+const windowsCreateCloseBtn = document.getElementById('closeBtn');
+const windowsCreateForm = document.getElementById('windowCreateForm');
 
 
+
+// Event listeners
+createBtn.addEventListener('click', () => {
+
+    windowsCreate.style.display = 'block';
+
+});
+
+windowsCreateCloseBtn.addEventListener('click', () => {
+    windowsCreate.style.display = 'none';
+})
+
+windowsCreateForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    // Recuperar los datos del formulario
+    const formData = {
+        presupuesto: document.getElementById('presupuesto').value,
+        unidad: document.getElementById('unidad').value,
+        tipo: document.getElementById('tipo').value,
+        cantidad: document.getElementById('cantidad').value,
+        valor: document.getElementById('valor').value,
+        fecha: document.getElementById('fecha').value,
+        proveedor: document.getElementById('proveedor').value,
+        documentacion: document.getElementById('documentacion').value,
+    };
+
+    addElementToList("Unidad: " + formData.unidad + " // Tipo: " + formData.tipo);
+    historial(`Elemento creado: ${formData.unidad}`);
+    windowsCreate.style.display = 'none';
+    windowsCreateForm.reset();
+})
+
+// functions
 function historial(action) {
     const historialItem = document.createElement('div');
     historialItem.classList.add('historial-item');
