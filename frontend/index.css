@@ -26,17 +26,16 @@ header img {
     background: #CFCFCF;
     height: 100%;
     margin: 10px;
-    border-radius: 15px;
+    border-radius: 10px;
 }
 
 
 .main {
     flex: 1;
     flex-direction: row;
-    height: 100%;
+    height: 87%;
     margin: 10px;
-    overflow: hidden;
-    border-radius: 15px;
+    border-radius: 10px;
 }
 
 .toolbar {
@@ -95,7 +94,45 @@ header img {
 
 .list {
     background: #CFCFCF;
-    border-radius: 15px;
+    border-radius: 10px;
     overflow-y: auto;
     height: 100%;
+}
+
+.list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: white;
+    margin: 15px;
+    border-radius: 5px;
+}
+
+.buttons {
+    display: flex;
+    gap: 5px;
+}
+
+.edit-btn {
+    background: #14D9A1;
+}
+
+.desactivar-btn {
+    background:rgb(248, 65, 65);
+}
+
+.edit-btn, .desactivar-btn {
+    border: none;
+    cursor: pointer;
+    transition: 100ms;
+}
+
+.edit-btn:hover, .desactivar-btn:hover {
+    transform: scale(1.1);
+}
+
+.edit-btn img, .desactivar-btn img {
+    width: 30px;
+    height: 30px;
 }
