@@ -98,13 +98,42 @@ header img {
     margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 80%;
+    width: auto;
     max-width: 600px;
     border-radius: 10px;
 }
 
 .window-create-form {
+    margin: auto 5%;
     
+}
+
+.window-create-form label,input {
+    margin-bottom: 3%;
+}
+
+.inputs {
+    
+}
+
+.submit-button {
+    background-color: #77D9D9;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    height: 40px;
+    width: 200px;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight:600;
+    position: fixed;
+    transition: 120ms;
+}
+
+.submit-button:hover {
+    background-color: #14D9A1;
+    transform: scale(1.1);
 }
 
 .close-btn {
